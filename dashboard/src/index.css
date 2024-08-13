@@ -1,0 +1,170 @@
+/* Basic reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+.App {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.App-header {
+    background-color: #007bff;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.App-header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+/* Dashboard layout */
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.category {
+    flex: 1 1 calc(50% - 20px);
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.category h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #f0f4f8;
+    padding-bottom: 10px;
+}
+
+/* Widget layout */
+.widgets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.widget {
+    flex: 1 1 calc(50% - 20px);
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.widget:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.widget h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.widget p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Button styles */
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.removeBtn {
+    position: relative;
+    left: 4px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Add Widget Modal */
+.add-widget-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.add-widget-modal input,
+.add-widget-modal textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.add-widget-modal button {
+    align-self: flex-end;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .category {
+        flex: 1 1 100%;
+    }
+
+    .widget {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .App-header h1 {
+        font-size: 1.4rem;
+    }
+
+    .category h2 {
+        font-size: 1.25rem;
+    }
+
+    .widget h3 {
+        font-size: 1.1rem;
+    }
+}
+
+.widget canvas {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.widget h3 {
+    margin-bottom: 15px;
+}
+
+.widget p {
+    margin-top: 15px;
+    font-weight: bold;
+}
