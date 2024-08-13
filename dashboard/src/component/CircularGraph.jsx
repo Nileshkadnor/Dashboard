@@ -1,42 +1,10 @@
-// import React from 'react';
-// import { Doughnut } from 'react-chartjs-2';
-// import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 
-// // Register the necessary components
-// ChartJS.register(ArcElement, Tooltip, Legend);
-
-// const CircularGraph = ({ data, labels, colors }) => {
-//     const chartData = {
-//         labels: labels,
-//         datasets: [
-//             {
-//                 data: data,
-//                 backgroundColor: colors,
-//                 borderWidth: 2,
-//             },
-//         ],
-//     };
-
-//     const options = {
-//         cutout: '70%', // This makes the chart a donut rather than a full pie chart
-//         responsive: true,
-//         plugins: {
-//             legend: {
-//                 position: 'bottom',
-//             },
-//         },
-//     };
-
-//     return <Doughnut data={chartData} options={options} />;
-// };
-
-// export default CircularGraph;
 
 import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 
-// Register the necessary components
+
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const CircularGraph = ({ data, labels, colors, onRemove }) => {
@@ -52,7 +20,7 @@ const CircularGraph = ({ data, labels, colors, onRemove }) => {
     };
 
     const options = {
-        cutout: '70%', // This makes the chart a donut rather than a full pie chart
+        cutout: '70%', 
         responsive: true,
         plugins: {
             legend: {

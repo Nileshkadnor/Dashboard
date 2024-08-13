@@ -2,9 +2,9 @@ import React from 'react';
 import CircularGraph from './CircularGraph';
 
 const ExampleWidget = ({ onRemove }) => {
-    const data = [2, 2]; // Example data values
+    const data = [2, 2]; 
     const labels = ['Connected', 'Not Connected'];
-    const colors = ['#4e79a7', '#f28e2c']; // Colors for each section of the graph
+    const colors = ['#4e79a7', '#f28e2c']; 
 
     return (
         <div className="widget">

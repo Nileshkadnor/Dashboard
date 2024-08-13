@@ -13,7 +13,7 @@ const AddWidgetModal = ({ categoryId, addWidget, onClose }) => {
         addWidget(categoryId, newWidget);
         setWidgetName('');
         setWidgetContent('');
-        onClose(); // Close modal after adding widget
+        onClose(); 
     };
 
     return (
